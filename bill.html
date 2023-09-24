@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                  background-color: aqua;
+                  
+                  margin: 20px 30px 20px 30px;
+                 }
+                 .NAME{
+                    border-style: double;
+                  border-radius: 60px;
+                  border-width: 20px;
+                 border-color: fuchsia;
+                    text-align: center;
+                    color: red;
+                    font-size: larger;
+                    padding: 5px;
+                    letter-spacing: 10px;
+                    background-color: gold;
+                    
+                    
+                 }
+                 table,tr,th{
+                    background-color: beige;
+                    color:violet ;
+                    
+
+
+                 }
+
+
+        </style>
+        <script type="text/javascript">
+            function totalprice(clk_id){
+                var QUANTITY=parseFloat(document.getElementById("QUANTITY").value);
+                var PRICE=parseFloat(document.getElementById("PRICE").value);
+                var totalprice=QUANTITY*PRICE;
+                document.getElementById("totalprice").textContent=totalprice.toFixed(2);
+            }
+            function cls()
+            {
+             QUANTITY.value="0";
+             PRICE.value="0";
+             totalprice.value="0";
+            }
+
+        </script>
+
+    </head>
+    <body>
+        
+        <div class="NAME" id="1">
+            <h1><u>---BILLING COUNTER---</u></h1>
+        
+        <br>
+        <br>
+        <table border="1">
+            
+            <tr>
+                <th>CUSTOMER NAME:</th>
+                
+                <th>ITEMS:</th>
+                <th>QUANTITY:</th>
+                <th>PRICE:</th>
+                <th>TOTALPRICE:</th>
+
+
+            </tr>
+            <tr>
+                <th><input type="text"></th>
+                <th><select>
+                    <option value="1">tomato</option>
+                    <option value="2">onion</option>
+                    <option value="3">potato</option>
+                    <option value="4">chips</option>
+                    <option value="5">paneer</option>
+                    <option value="6">chocolate</option>
+                </select></th>
+                <th>
+                <input type="number" id="QUANTITY" value=0>
+                </th>
+                <th>
+                <input type="number" id="PRICE" value=0>
+                </th>
+                <th>
+                     <button type="button" id="totalprice" value="totalprice"></button>
+                    <!-- <input type="text" id="TOTALPRICE" value=""disabled/ onclick="totalprice(clk_id)"> -->
+                    <button onclick="totalprice(this.id).totalprice"></button>
+                </th>
+    
+            </tr>
+        </table>
+        <button type="submit" onclick="cls()">CLEAR ALL</button>
+        
+        </div>
+    </body>
+</html>
